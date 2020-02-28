@@ -1,0 +1,220 @@
+.tab__btn {
+	display: none;
+}
+.tab__content h2 {
+	font-size: 24px;
+}
+.c-list li {
+	position: relative;
+	padding-left: 30px;
+}
+.c-list li:nth-child(n+2) {
+	margin-top: 15px;
+}
+.c-list li > div {
+	color: #1d1d1d;
+}
+.c-list-mark {
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-family: 'PFDinTextPro-Light';
+	font-size: 32px;
+	color: #00b596;
+}
+
+@media screen and (min-width: 880px) {
+	.tabs__content {
+		position: relative;
+		padding-top: 80px;
+	}
+	.tab__item {
+		position: absolute;
+		opacity: 0;
+		z-index: -1;
+	}
+	.tab__item-active {
+		position: relative;
+		opacity: 1;
+		z-index: 1;
+	}
+	.tab__content {
+		p {
+			transform: translateY(30px);
+			max-width: 700px;
+			font-size: 18px;
+			line-height: 24px;
+			opacity: 0;
+			transition: all 0.5s ease-in-out;
+		}
+		h2 {
+			transform: translateY(30px);
+			margin-top: 40px;
+			opacity: 0;
+			transition: all 0.5s ease-in-out;
+			transition-delay: 0.25s;
+		}
+		ul {
+			transform: translateY(30px);
+			margin-top: 30px;
+			max-width: 640px;
+			opacity: 0;
+			transition: all 0.5s ease-in-out;
+			transition-delay: 0.5s;
+		}
+		.btn {
+			transform: translateY(30px);
+			margin-top: 40px;
+			opacity: 0;
+			transition: all 0.5s ease-in-out;
+			transition-delay: 0.75s;
+		}
+	}
+	.tab__item-active {
+		.tab__content {
+			p {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			h2 {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			ul {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			.btn {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	.c-list li > div {
+		font-size: 18px;
+		line-height: 24px;
+	}
+}
+
+@media screen and (max-width: 880px) {
+	body {
+		background-image: url(../img/main-screen.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	.body-earning {
+		background-image: none;
+	}
+	h1 {
+		font-size: 36px;
+		margin: 45px auto 20px;
+	}
+	.section__earning {
+		width: 100%;
+		min-height: auto;
+		padding-bottom: 0px;
+		background-image: none;
+	}
+
+	.tab__item {
+		height: 68px;
+		overflow: hidden;
+		margin-bottom: 20px;
+		&-active {
+			height: auto;
+			overflow: visible;
+		}
+	}
+
+	.tab__btn {
+		position: relative;
+		display: block;
+		margin-bottom: 20px;
+		padding: 23.5px 45px 23.5px 75px;
+		background-color: rgba(255,255,255,0.6);
+		cursor: pointer;
+
+		svg {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.icon_arrow-b {
+			right: 15px;
+			height: 19px;
+			width: 19px;
+			transition: all 0.5s ease-in-out;
+		}
+
+		&-active .icon_arrow-b {
+			transform: rotate(180deg);
+			transform-origin: 50% 25%;
+		}
+
+		.icon_trade,
+		.icon_invest {
+			left: 20px;
+			height: 28px;
+			width: 35px;
+		}
+		.icon_investor {
+			left: 23px;
+			height: 35px;
+			width: 30px;
+		}
+		&_title {
+			color: #2b2b2b;
+			font-size: 18px;
+			white-space: nowrap;
+			text-align: center;
+			overflow: hidden;
+		}
+	}
+
+
+	.tab__content {
+		padding: 0px 25px 270px;
+		margin: 0px -15px;
+		background-image: url(../img/bg-earning.png);
+		background-repeat: no-repeat;
+		background-position: right bottom;
+		background-size: auto 57%;
+
+		p {
+			font-size: 16px;
+			line-height: 20px;
+		}
+		h2 {
+			margin-top: 25px;
+		}
+		ul {
+			margin-top: 25px;
+		}
+		.btn {
+			margin-top: 20px;
+		}
+	}
+
+	.c-list li > div {
+		font-size: 16px;
+		line-height: 18px;
+	}
+}
+@media screen and (max-width: 680px) {
+	.tab__content {
+		background-size: auto 44%;
+	}
+}
+@media screen and (max-width: 480px) {
+	.tab__btn_title {
+		text-align: left;
+	}
+	.tab__content {
+		background-position: right -90px bottom;
+		background-size: auto 40%;
+	}
+}

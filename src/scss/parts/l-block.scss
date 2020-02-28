@@ -1,0 +1,14 @@
+.l-block {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.l-block__inner {
+	display: table-cell;
+	vertical-align: middle;
+}
+.l-block__inner >* {
+	display: table;
+	margin: 0px auto;
+}

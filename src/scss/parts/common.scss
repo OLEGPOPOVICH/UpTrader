@@ -1,0 +1,72 @@
+body {
+	margin: 0px;
+	background-color: #f3f2da;
+	font-family: 'PFDinTextPro-Regular';
+	font-size: 16px;
+	color: #171717;
+}
+body, html {
+    min-height: 100%;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+	visibility: hidden;
+	opacity: 0;
+	overflow: hidden;
+}
+body.show .wrapper {
+    visibility: visible;
+	opacity: 1;
+	transition: opacity 0.3s ease-in-out;
+}
+.content {
+	flex: 1 0 auto;
+	position: relative;
+}
+.container {
+	max-width: 1230px;
+	width: 100%;
+	margin: 0px auto;
+	padding: 0px 15px;
+}
+.row {
+	display: flex;
+}
+button {
+	border: none;
+	-webkit-appearance: none;
+    border-radius: 0px;
+	font: inherit;
+	outline: none;
+}
+ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+p {
+	margin: 0px;
+}
+
+h1, h2 {
+	margin: 0px;
+	font-family: 'PFDinTextPro-Light';
+	font-weight: normal;
+}
+h1 {
+	font-size: 48px;
+}
+
+.caption {
+	text-align: center;
+}
+
+.section-bg {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
